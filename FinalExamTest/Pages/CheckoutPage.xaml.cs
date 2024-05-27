@@ -24,6 +24,9 @@ public partial class CheckoutPage : ContentPage
     {
         base.OnAppearing();
         total.Text = "Total Price: " + GlobalTrans.Total.ToString();
+        Address_List_View.ItemsSource = App.DBTrans.GetAddresses();
+        Cards_List_View.ItemsSource = App.DBTrans.GetCards();
+        Proceed_List_View.ItemsSource = App.DBTrans.GetBills();
     }
     private void useItems_Clicked(object sender, EventArgs e)
     {
@@ -52,5 +55,14 @@ public partial class CheckoutPage : ContentPage
     {
         var card = e.Item as Card;
         Cardd_ID = card.Card_ID;
+    }
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+        Button button = (Button)sender;
+        App.DBTrans.DeleteBill((int)button.BindingContext);
+        Proceed_List_View.ItemsSource = App.DBTrans.GetBills();
+
+
     }
 }

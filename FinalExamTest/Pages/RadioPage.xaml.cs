@@ -134,11 +134,27 @@ public partial class RadioPage : ContentPage
 
     private void keyboard_CheckedChanged(object sender, CheckedChangedEventArgs e)
     {
-
+        if (keyboard.IsChecked)
+        {
+            GlobalTrans.Total += 400;
+        }
+        else
+        {
+            GlobalTrans.Total -= 400;
+        }
+        totalPrice.Text = "Total Price: " + GlobalTrans.Total.ToString();
     }
 
     private void headphones_CheckedChanged(object sender, CheckedChangedEventArgs e)
     {
-
+        if (headphones.IsChecked)
+        {
+            GlobalTrans.Total += 400;
+        }
+        else
+        {
+            GlobalTrans.Total -= 400;
+        }
+        totalPrice.Text = "Total Price: " + GlobalTrans.Total.ToString();
     }
 }

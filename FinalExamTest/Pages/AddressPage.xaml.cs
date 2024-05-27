@@ -20,4 +20,13 @@ public partial class AddressPage : ContentPage
 
 
     }
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+        Button button = (Button)sender;
+        App.DBTrans.DeleteAddress((int)button.BindingContext);
+        Address_List_View.ItemsSource = App.DBTrans.GetAddresses();
+
+
+    }
 }

@@ -18,4 +18,12 @@ public partial class CardsPage : ContentPage
 
         Cards_List_View.ItemsSource = App.DBTrans.GetCards();
     }
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+        Button button = (Button)sender;
+        App.DBTrans.DeleteCard((int)button.BindingContext);
+        Cards_List_View.ItemsSource = App.DBTrans.GetCards();
+
+    }
 }

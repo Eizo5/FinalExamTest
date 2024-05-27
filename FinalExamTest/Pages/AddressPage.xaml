@@ -24,6 +24,7 @@
                                     <Label Margin="5" TextColor="black" Text="{Binding Address_ID}"/>
                                     <Label  Margin="5" TextColor="black" Text="{Binding City}"/>
                                     <Label  Margin="5" TextColor="black" Text="{Binding District}"/>
+                                    <Button Text="X" BindingContext="{Binding Address_ID}" Clicked="Button_Clicked" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Margin="10,0" BackgroundColor="#DC3545" CornerRadius="100" WidthRequest="40" HeightRequest="40" FontAttributes="Bold"/>
                                 </StackLayout> 
                             </ViewCell>
                         </DataTemplate>

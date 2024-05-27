@@ -24,56 +24,31 @@ public partial class SizesPage : ContentPage
 
     private void memorySizeMinus_Clicked(object sender, EventArgs e)
     {
-        if( memorySize.Text == "0")
-        {
-            tempPriceMemory = 0;
-        }
-        else if (memorySize.Text == "1TB")
-        {
-            tempPriceMemory = 500; 
-        }
-        else if ( memorySize.Text == "2TB")
-        {
-            tempPriceMemory = 400;
-        }
+        int number;
         if (memorySize.Text != "0")
         {
-            i--;
+            number = int.Parse(memorySize.Text);
+            number--;
+            memorySize.Text = number.ToString();
+            GlobalTrans.Total -= 20;
         }
-        
-        memorySize.Text = memorySizes[i];
-        GlobalTrans.Total -= tempPriceMemory;
-        totalPrice.Text = GlobalTrans.Total.ToString();
-        
+        totalPrice.Text = "Total Price: " + GlobalTrans.Total.ToString();
     }
 
     private void memorySizePlus_Clicked(object sender, EventArgs e)
     {
 
-        if (memorySize.Text == "2TB")
+        int number;
+        if (memorySize.Text != "16")
         {
-            tempPriceMemory = 0;
+            number = int.Parse(memorySize.Text);
+            number++;
+            memorySize.Text = number.ToString();
+            GlobalTrans.Total += 20;
         }
-        else if (memorySize.Text == "1TB")
-        {
-            tempPriceMemory = -500;
-            tempPriceMemory += 900;
-        }
-        else if (memorySize.Text == "0")
-        {
-            tempPriceMemory = 500;
-        }
-        if (memorySize.Text != "2TB")
-        {
-            i++;
-        }
-        memorySize.Text = memorySizes[i];
-        GlobalTrans.Total += tempPriceMemory;
-        totalPrice.Text = GlobalTrans.Total.ToString();
-        tempPriceMemory = 0;
+        totalPrice.Text = "Total Price: " + GlobalTrans.Total.ToString();
     }
-
-    private void ramSizeMinus_Clicked(object sender, EventArgs e)
+        private void ramSizeMinus_Clicked(object sender, EventArgs e)
     {
         if (ramSize.Text == "0")
         {

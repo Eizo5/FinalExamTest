@@ -23,6 +23,7 @@
                                     <Label TextColor="black" Text="{Binding Card_ID}"/>
                                     <Label TextColor="black" Text="{Binding Card_Name}"/>
                                     <Label TextColor="black" Text="{Binding Card_Number}"/>
+                                    <Button Text="X" BindingContext="{Binding Card_ID}" Clicked="Button_Clicked" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Margin="10,0" BackgroundColor="#DC3545" CornerRadius="100" WidthRequest="40" HeightRequest="40" FontAttributes="Bold"/>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>

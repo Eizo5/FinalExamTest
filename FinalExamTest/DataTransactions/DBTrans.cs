@@ -36,31 +36,38 @@ namespace FinalExamTest.DataTransactions
 
         public List<Bills> GetBills()
         {
+
             return conn.Table<Bills>().ToList();
         }
 
         public void AddAddress(Address address)
         {
+            conn = new SQLiteConnection(this.dbPath);
             conn.Insert(address);
         }
         public void AddCard(Card card)
         {
+            conn = new SQLiteConnection(this.dbPath);
             conn.Insert(card);
         }
         public void AddBill(Bills bill)
         {
+            conn = new SQLiteConnection(this.dbPath);
             conn.Insert(bill);
         }
         public void DeleteAddress(int Address_ID)
         {
+            conn = new SQLiteConnection(this.dbPath);
             conn.Delete(new Address { Address_ID = Address_ID });
         }
         public void DeleteCard(int Card_ID)
         {
+            conn = new SQLiteConnection(this.dbPath);
             conn.Delete(new Card { Card_ID = Card_ID });
         }
         public void DeleteBill(int Bill_ID)
         {
+            conn = new SQLiteConnection(this.dbPath);
             conn.Delete(new Bills { Bill_ID =  Bill_ID });
         }
     }
