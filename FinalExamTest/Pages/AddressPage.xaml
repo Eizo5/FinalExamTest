@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalExamTest.AddressPage"
+             Title="AddressPage">
+    <StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="City"/>
+            <Entry x:Name="city" /> 
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="District"/>
+            <Entry x:Name="district" />
+        </StackLayout>
+        <StackLayout HorizontalOptions="Center" >
+            <Button Text="Add" x:Name="Add_Button" Clicked="Add_Button_Clicked"/>
+
+            <StackLayout  BackgroundColor="Beige">
+                <ListView x:Name="Address_List_View" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Margin="5" TextColor="black" Text="{Binding Address_ID}"/>
+                                    <Label  Margin="5" TextColor="black" Text="{Binding City}"/>
+                                    <Label  Margin="5" TextColor="black" Text="{Binding District}"/>
+                                </StackLayout> 
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
