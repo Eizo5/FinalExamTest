@@ -183,6 +183,31 @@ Ready Elements
 
 ----
 
+// Radio Buttons 
+
+            <StackLayout RadioButtonGroup.GroupName="Proccessor" Grid.Column="0" Grid.Row="0">
+                <RadioButton Content="i3"  x:Name="i3" CheckedChanged="i3_CheckedChanged" />
+                <RadioButton Content="i5"  x:Name="i5" CheckedChanged="i5_CheckedChanged"/> 
+                <RadioButton Content="i7"  x:Name="i7" CheckedChanged="i7_CheckedChanged"/>
+                
+            </StackLayout>
+
+// CheckBoxes 
+
+  <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <CheckBox x:Name="mouse" CheckedChanged="mouse_CheckedChanged" />
+                <Label Text="Mouse"/>
+            </StackLayout> 
+            <StackLayout Orientation="Horizontal">
+                <CheckBox x:Name="keyboard" CheckedChanged="keyboard_CheckedChanged" />
+                <Label Text="keyboard"/>
+            </StackLayout> 
+            <StackLayout Orientation="Horizontal">
+                <CheckBox x:Name="headphones" CheckedChanged="headphones_CheckedChanged" />
+                <Label Text="headphones"/>
+            </StackLayout>
+
 
 
         <StackLayout Orientation="Horizontal" HorizontalOptions="Start" >

@@ -13,9 +13,9 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <StackLayout RadioButtonGroup.GroupName="Proccessor" Grid.Column="0" Grid.Row="0">
-                <RadioButton Content="i3" Value="30" CheckedChanged="i3_CheckedChanged" x:Name="i3"/>
-                <RadioButton Content="i5" Value="50" x:Name="i5" CheckedChanged="i5_CheckedChanged"/> 
-                <RadioButton Content="i7" Value="70" x:Name="i7" CheckedChanged="i7_CheckedChanged"/>
+                <RadioButton Content="i3"  x:Name="i3" CheckedChanged="i3_CheckedChanged" />
+                <RadioButton Content="i5"  x:Name="i5" CheckedChanged="i5_CheckedChanged"/> 
+                <RadioButton Content="i7"  x:Name="i7" CheckedChanged="i7_CheckedChanged"/>
                 
             </StackLayout>
             <StackLayout RadioButtonGroup.GroupName="RTX" Grid.Column="1" Grid.Row="0">
